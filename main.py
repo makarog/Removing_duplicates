@@ -20,6 +20,12 @@ def main():
 
     sorted_array = list(map(int, input_data.split()))
 
+    # Проверка длины массива
+    if len(sorted_array) != n:
+        print(
+            "Ошибка: полученная длина массива не соответствует указанному значению n.")
+        sys.exit(1)
+
     result = remove_duplicates(sorted_array)
     output = ' '.join(map(str, result))
     print(output)
